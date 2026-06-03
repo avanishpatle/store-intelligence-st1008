@@ -1,6 +1,3 @@
-// PROMPT: Jest + supertest tests for Express ingest idempotency, metrics, funnel, STORE_BLR_002 alias.
-// CHANGES MADE: mongodb-memory-server setup; fixed funnel re-entry test expectations.
-
 import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import request from "supertest";

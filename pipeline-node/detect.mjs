@@ -1,7 +1,3 @@
-/**
- * Node detection pipeline: ffmpeg frame extract + motion blobs + zone polygons.
- * Output: data/events.jsonl (challenge schema)
- */
 import { spawn } from "child_process";
 import fs from "fs";
 import os from "os";
@@ -53,7 +49,6 @@ function zoneAt(nx, ny, polygons) {
   return null;
 }
 
-/** Extract sampled frames in one ffmpeg pass (much faster than per-frame spawn). */
 async function extractFramesBatch(videoPath, frameSkip, maxFrames) {
   const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "store-pipeline-"));
   const pattern = path.join(tmpDir, "frame_%05d.jpg");
@@ -109,7 +104,6 @@ function motionCentroids(prevGray, currGray, w, h, thresh = 25) {
       }
     }
   }
-  // cluster naive: merge nearby
   const merged = [];
   for (const b of blobs) {
     const near = merged.find(
@@ -317,9 +311,7 @@ async function processCamera(cam, maxFrames) {
   process.stdout.write("\n");
   try {
     fs.rmSync(tmpDir, { recursive: true, force: true });
-  } catch {
-    /* ignore */
-  }
+  } catch {}
 
   console.log(`  ${cam.camera_id}: ${events.length} events from ${processed} frames`);
   return events;
