@@ -1,0 +1,80 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #0f0a1a;
+  color: #f3e8ff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  color: #c084fc;
+  margin-bottom: 0.25rem;
+}
+
+.sub {
+  color: #a78bfa;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e1033, #2d1b4e);
+  border: 1px solid #6b21a8;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.card .label {
+  font-size: 0.85rem;
+  color: #c4b5fd;
+}
+
+.card .value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.status {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.error {
+  color: #f87171;
+}
+
+.funnel {
+  margin-top: 2rem;
+}
+
+.funnel-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.stage {
+  flex: 1;
+  min-width: 120px;
+  background: #3b0764;
+  padding: 0.75rem;
+  border-radius: 8px;
+  text-align: center;
+}

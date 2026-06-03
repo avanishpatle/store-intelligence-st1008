@@ -1,0 +1,19 @@
+node_modules/
+**/node_modules/
+dist/
+backend/coverage/
+data/*.db
+*.db
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+data/store_intelligence.db
+data/events.jsonl
+*.pt
+.venv/
+venv/
+
+# Large CCTV clips — keep locally; document path in README
+**/CCTV Footage*/
+*.mp4

@@ -1,0 +1,15 @@
+{
+  "name": "store-intelligence-pipeline",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "detect": "node detect.mjs",
+    "detect:dev": "node detect.mjs --camera CAM_1 --max-frames 100"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "sharp": "^0.33.5",
+    "uuid": "^11.0.5"
+  }
+}

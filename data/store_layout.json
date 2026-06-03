@@ -1,0 +1,72 @@
+{
+  "store_id": "ST1008",
+  "store_name": "Brigade_Bangalore",
+  "city": "Bangalore",
+  "open_hours": {"start": "10:00", "end": "22:00", "timezone": "Asia/Kolkata"},
+  "cameras": [
+    {
+      "camera_id": "CAM_1",
+      "role": "entry",
+      "file": "CAM 1.mp4",
+      "clip_start_utc": "2026-04-10T10:00:00Z",
+      "zones": ["ENTRY"]
+    },
+    {
+      "camera_id": "CAM_2",
+      "role": "main_floor",
+      "file": "CAM 2.mp4",
+      "clip_start_utc": "2026-04-10T10:00:00Z",
+      "zones": ["MAKEUP", "SKINCARE"]
+    },
+    {
+      "camera_id": "CAM_3",
+      "role": "main_floor",
+      "file": "CAM 3.mp4",
+      "clip_start_utc": "2026-04-10T10:00:00Z",
+      "zones": ["SKINCARE", "FRAGRANCE"]
+    },
+    {
+      "camera_id": "CAM_4",
+      "role": "billing",
+      "file": "CAM 4.mp4",
+      "clip_start_utc": "2026-04-10T10:00:00Z",
+      "zones": ["BILLING"]
+    },
+    {
+      "camera_id": "CAM_5",
+      "role": "billing",
+      "file": "CAM 5.mp4",
+      "clip_start_utc": "2026-04-10T10:00:00Z",
+      "zones": ["BILLING"]
+    }
+  ],
+  "zones": [
+    {"zone_id": "ENTRY", "label": "Store Entry", "sku_zone": null},
+    {"zone_id": "MAKEUP", "label": "Makeup Aisle", "sku_zone": "MAKEUP"},
+    {"zone_id": "SKINCARE", "label": "Skincare", "sku_zone": "MOISTURISER"},
+    {"zone_id": "FRAGRANCE", "label": "Fragrance", "sku_zone": "FRAGRANCE"},
+    {"zone_id": "BILLING", "label": "Billing Counter", "sku_zone": null}
+  ],
+  "entry_line": {
+    "CAM_1": {"y_ratio": 0.55, "inbound_direction": "down"}
+  },
+  "zone_polygons": {
+    "CAM_1": {
+      "ENTRY": [[0.0, 0.4], [1.0, 0.4], [1.0, 1.0], [0.0, 1.0]]
+    },
+    "CAM_2": {
+      "MAKEUP": [[0.0, 0.2], [0.5, 0.2], [0.5, 0.8], [0.0, 0.8]],
+      "SKINCARE": [[0.5, 0.2], [1.0, 0.2], [1.0, 0.8], [0.5, 0.8]]
+    },
+    "CAM_3": {
+      "SKINCARE": [[0.0, 0.15], [0.55, 0.15], [0.55, 0.85], [0.0, 0.85]],
+      "FRAGRANCE": [[0.55, 0.15], [1.0, 0.15], [1.0, 0.85], [0.55, 0.85]]
+    },
+    "CAM_4": {
+      "BILLING": [[0.1, 0.1], [0.9, 0.1], [0.9, 0.95], [0.1, 0.95]]
+    },
+    "CAM_5": {
+      "BILLING": [[0.1, 0.1], [0.9, 0.1], [0.9, 0.95], [0.1, 0.95]]
+    }
+  }
+}
