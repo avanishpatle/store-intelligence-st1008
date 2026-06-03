@@ -20,9 +20,7 @@ Requires **Docker Desktop** installed, running, and **WSL2** on Windows.
 | Error | Fix |
 |-------|-----|
 | `command not found` | Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) |
-| `unable to start` / `docker_engine` | Install WSL: `wsl --install` → restart → open Docker Desktop |
-
-Full Windows guide: **[docs/DOCKER_SETUP.md](docs/DOCKER_SETUP.md)**
+| `unable to start` / `docker_engine` | Install WSL: `wsl --install` → restart → open Docker Desktop → Settings → WSL integration |
 
 If Docker cannot start yet, use [Run without Docker](#run-without-docker) temporarily.
 

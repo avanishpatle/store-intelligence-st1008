@@ -17,3 +17,8 @@ venv/
 # Large CCTV clips — keep locally; document path in README
 **/CCTV Footage*/
 *.mp4
+
+# Challenge source files & local-only artifacts (processed data lives in data/)
+*.pdf
+*.xlsx
+docs/*.pptx
